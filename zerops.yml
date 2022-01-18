@@ -6,5 +6,5 @@ admin:
     build:
       - npm i --production=false
       - npm run build-admin
-      - contember migrations:execute recipe-contember-admin --yes
+      - contember migrations:execute $CONTEMBER_PROJECT_NAME --yes
     deploy: [ ./admin/dist/~/ ]
