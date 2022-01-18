@@ -23,7 +23,7 @@ export const ArticleList = (
 
 export const ArticleCreate = (
   <CreatePage
-    entity="Article"
+    entity="Articles"
     pageName="articleNew"
     rendererProps={{ title: "Add a article" }}
     redirectOnSuccess={(request, id) => ({
@@ -41,7 +41,7 @@ export const ArticleCreate = (
 
 export const ArticleEdit = (
   <EditPage
-    entity="Article(id = $id)"
+    entity="Articles(id = $id)"
     pageName="article"
   >
       <TextField field="title" label="Title" />
