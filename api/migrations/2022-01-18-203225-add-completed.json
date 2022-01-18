@@ -1,0 +1,36 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createColumn",
+			"entityName": "Article",
+			"field": {
+				"name": "published",
+				"columnName": "published",
+				"nullable": true,
+				"type": "Bool",
+				"columnType": "boolean"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Article/operations/create/published",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Article/operations/read/published",
+					"value": true
+				},
+				{
+					"op": "add",
+					"path": "/roles/admin/entities/Article/operations/update/published",
+					"value": true
+				}
+			]
+		}
+	]
+}
