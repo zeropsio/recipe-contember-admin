@@ -8,6 +8,7 @@ import {
   PageLinkById,
   EditPage
 } from "@contember/admin";
+import React from 'react';
 
 export const ArticleList = (
   <TablePage entities="Article" pageName="articles">
