@@ -1,0 +1,12 @@
+admin:
+  build:
+    base: [ nodejs@14 ]
+    prepare:
+      - npm i -g typescript@4.3.5
+      - npm i -g vite
+      - npm i -g @contember/cli@0.12.0-beta.2
+    build:
+      - npm i --production=false
+      - npm run build-admin
+      - contember migrations:execute recipe-contember-admin --yes
+    deploy: [ ./admin/dist/~/ ]
